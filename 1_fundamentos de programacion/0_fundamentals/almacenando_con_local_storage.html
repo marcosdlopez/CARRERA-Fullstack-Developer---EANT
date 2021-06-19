@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Almacenando datos con Local Storage</title>
+    <script>
+        
+        
+        let perro1 = {
+            nombre: 'Roco',
+            raza: 'Labrador',
+            edad: 10
+        }
+        
+        let perro2 = {
+            nombre: 'Fido',
+            raza: 'Cocker',
+            edad: 12
+        }
+
+        let perro3 = {
+            nombre: 'Titan',
+            raza: 'Chihuahua',
+            edad: 4
+        }
+
+        let jauria =[perro1, perro2, perro3];
+        
+        let amo = {
+            nombre: 'Martín',
+            edad: 41,
+            perros: jauria
+        }
+
+        let amo_version_txt = JSON.stringify(amo);
+        
+        //Almacenar el elemento en Local Storage
+        localStorage.setItem('mi_clave', amo_version_text);
+        
+        //Recuperar la info con
+        let nuevo_amo_txt = localStorage.getItem('mi_clave');
+        let nuevo_amo = JSON.parse(nuevo_amo_txt);
+
+    
+    </script>
+</head>
+<body>    
+</body>
+</html>

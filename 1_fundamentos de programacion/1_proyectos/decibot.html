@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>El Decibot: Tu mejor Amigo!</title>
+    <script>
+        
+        //V1
+        /*
+        let lluvia = prompt("Llueve o no llueve?");
+
+        if(lluvia == "SI"){
+            alert("Tomate el bondi!");
+        }
+        else{
+            alert("Camina! Vagooooo");
+        }
+        */
+
+        //V2
+        
+        /*
+        let clima = prompt("Usuario...cuál es el clima?");
+        let sube = parseFloat(prompt("Usuario...cuanto crédito tenés en la SUBE?"));
+
+        if((clima =="Esta lloviendo" || clima =="Llueve") && sube>0){
+                alert("Tomate el bondi!");                
+        }
+        else if(clima == "Esta nublado"){
+            let humedad = parseFloat(prompt("Usuario...cuál es humedad?"));
+            if(humedad > 70){
+                alert("Tomate el bondi!");
+            }else if(humedad > 50){
+                alert("Mmmmmm...aiii no sEEEEEEE");
+            }else{
+                alert("Camina! Vagooooo");
+            }
+        }
+        else{
+            alert("Camina! Vagooooo");
+        }
+        */
+
+        let clima = prompt("Usuario...cuál es el clima?");
+        let sube = parseFloat(prompt("Usuario...cuanto crédito tenés en la SUBE?"));
+
+        switch(clima){
+
+            case "Esta lloviendo":
+                alert("Tomate el bondi!");
+                break;
+            
+            case "Esta nublado":
+            case "Llueve":
+                let humedad = parseFloat(prompt("Usuario...cuál es humedad?"));
+                if(humedad > 70){
+                    alert("Tomate el bondi!");
+                }else if(humedad > 50){
+                    alert("Mmmmmm...aiii no sEEEEEEE");
+                }else{
+                    alert("Camina! Vagooooo");
+                }
+                break;
+
+            default:
+                alert("Camina! Vagooooo");
+
+        }
+
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

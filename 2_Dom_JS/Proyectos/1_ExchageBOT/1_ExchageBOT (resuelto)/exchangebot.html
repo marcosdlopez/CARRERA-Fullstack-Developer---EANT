@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ExchangeBOT!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ExchangeBOT</h1>
+        <p>Tu Arbolito Digital</p>
+    </header>
+    <div id="contenedor">
+        <input type="text" id="pesos" placeholder="Ingrese la cantidad de Pesos a Cambiar"></input>
+        <p>Seleccione el tipo de Cambio</p>
+        <select id='moneda'>
+            <option value="D">Dólares</option>
+            <option value="R">Reales</option>
+            <option value="EU">Euros</option>
+            <option value="PU">Pesos Uruguayos</option>
+            <option value="Y">Yenes</option>
+        </select>
+        <p id="tasa">Tasa actual : XX $ / Moneda</p>
+        <div id="boton">Cambiar</div>
+        <p id="resultado">Usted obtendrá XXXXX Moneda</p>
+    </div>  
+    <script src="cambio.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VeterinarianBOT</title>
+    <script>
+
+        let agenda = [];
+
+        alert("Hola! Soy VeterinarianBOT! Tu asistente de pacientes!");
+
+        while(prompt("Desea ingresar un nuevo paciente? (SI/NO)") == "SI"){
+
+            let nom = prompt("Ingrese nombre");
+            let edad = prompt("Ingrese edad");
+            let peso = prompt("Ingrese peso");
+            let diagnostico = prompt("Ingrese diagnóstico");
+
+            let paciente = {
+                nombre: nom,
+                edad: edad,
+                peso: peso,
+                diagnostico: diagnostico
+            }
+
+            agenda.push(paciente);
+
+        }
+
+        //REcorriendo la agenda
+        let mensaje = "Pacientes activos:" + '\n';
+        for (let index = 0; index < agenda.length; index++) {
+            
+            mensaje = mensaje + "Paciente n°" + (index + 1) + ": " + agenda[index].nombre + " / Diagnóstico: " + agenda[index].diagnostico + '\n';
+            
+        }
+        alert(mensaje);
+
+        
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

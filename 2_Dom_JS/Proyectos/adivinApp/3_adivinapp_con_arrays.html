@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdivinApp!</title>
+    <script>
+        
+        let respuestas = [
+                        "Dalo por hecho!", 
+                        "Es muy probable", 
+                        "Mmm...tu futuro NO esta hecho!", 
+                        "No lo creo....",
+                        "No cuentes con ello!"
+                        ]
+
+        main();
+
+        function main(){
+
+            let nombre = presentacion();
+
+            let jugar = deseaJugar(nombre);
+
+            while(jugar == "SI"){
+
+                obtenerPregunta(nombre);
+                
+                let numero_magico = obtenerSuerte();
+
+                let respuesta = predecirDestino(numero_magico);
+                
+                darRespuesta(nombre, respuesta);
+
+                jugar = deseaJugar(nombre);
+            }
+
+            finalizar(nombre);
+        }        
+
+        function presentacion(){
+            alert("Hola Usuario! Soy Adivinator! El amo del futuro!");
+            alert("Hazme cualquier pregunta por Sí o por No! y yo te diré tu futuro...");
+            let nombre = prompt("Dime, cuál es tu nombre?");
+            return nombre;
+        }
+        
+        function deseaJugar(nombre){
+            let respuesta = prompt(nombre + " te gustaría jugar conmigo? (SI/NO)");
+            return respuesta;
+        }
+
+        function obtenerPregunta(nombre){
+            let pregunta = prompt("Dime " + nombre + " ¿Qué te gustaría saber?");
+        }
+
+        function obtenerSuerte(){
+            numero_aleatorio = Math.ceil(Math.random()*5);
+            return numero_aleatorio;
+        }
+
+        function predecirDestino(numero_magico){
+            let respuesta;
+            respuesta = respuestas[numero_magico-1]
+            return respuesta;
+        }
+
+        function darRespuesta(nombre, respuesta){
+            alert(nombre + " tu destino es...");
+            alert(respuesta); 
+        }
+
+        function finalizar(nombre){
+            alert("Adios..." + nombre + "...nos volveremos a encontrar");
+        }
+    
+    
+    </script>
+</head>
+<body>    
+</body>
+</html>

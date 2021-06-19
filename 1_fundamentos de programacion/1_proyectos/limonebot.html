@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EL LimoneBot!</title>
+    <script>
+        
+        let almacenA = 620;
+        let almacenB = 0;
+        let canasto = 0;    
+        let viajes = 0;
+        while (almacenA > 0){
+
+            if(almacenA >= 50){
+                almacenA = almacenA - 50;
+                canasto = 50;
+            }else{
+                canasto = almacenA;
+                almacenA = 0;
+            }            
+
+            almacenB = almacenB + canasto;
+            viajes++;
+        }
+
+        alert("Quedaron " + almacenA + " limones en el Almacén A");  
+        alert("Se hicieron " + viajes + " viajes");  
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

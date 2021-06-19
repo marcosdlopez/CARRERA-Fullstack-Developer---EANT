@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estructuras de Datos</title>
+    <script>
+        
+        let perro1 = {
+            nombre: 'Roco',
+            raza: 'Labrador',
+            edad: 10
+        }
+        
+        let perro2 = {
+            nombre: 'Fido',
+            raza: 'Cocker',
+            edad: 12
+        }
+
+        let perro3 = {
+            nombre: 'Titan',
+            raza: 'Chihuahua',
+            edad: 4
+        }
+
+        let jauria =[perro1, perro2, perro3];
+        
+        let amo = {
+            nombre: 'Martín',
+            edad: 41,
+            perros: jauria
+        }
+
+        let amo_version_txt = JSON.stringify(amo);
+        
+        let nuevo_amo = JSON.parse(amo_version_txt);
+
+    
+    </script>
+</head>
+<body>    
+</body>
+</html>

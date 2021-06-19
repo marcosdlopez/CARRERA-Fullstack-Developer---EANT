@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelerBOT, tu asistente de viajes</title>
+    <script>
+
+        main()
+
+        function main(){
+
+            let nombre = presentacion();
+            let millas = obtenerMillas(nombre);
+            
+            let destino;
+            let codigo;
+            
+            procesarPremio(millas);
+            
+            if(destino !=""){
+                imprimirBoleto(codigo, destino);
+            }      
+
+        }           
+
+        function presentacion(){
+            alert("Hola, soy TravellerBOT, tu asistente de viajes!");
+            let nombre = prompt("¿Cuál es tu nombre?");
+        }
+        
+        function obtenerMillas(nombre){
+            return parseInt(prompt(nombre + " ¿cuántas millas tenés?"));
+        }
+
+        function procesarPremio(millas){
+            if(millas < 500){
+                alert("Ohhh, lo sentimos mucho...no tienes sufiecientes millas...");
+                destino = "";
+            }
+            else if(millas <1000){
+                alert("Tus millas te permiten viajar gratis a Colonia!");
+                destino = "Colonia";
+                codigo = "COL";
+            }
+            else if(millas <3000){
+                alert("Tus millas te permiten viajar gratis a Sao Pablo!");
+                destino = "Sao Pablo";
+                codigo = "SAO";
+            }
+            else if(millas <5000){
+                alert("Tus millas te permiten viajar gratis a New York!");
+                destino = "New York";
+                codigo = "NYK";
+            }
+            else{
+                esVip = prompt("Por casualidad eres cliente VIP? (SI/NO)")
+                switch(esVip){
+                    case "SI": 
+                        alert("Tus millas te permiten viajar gratis a Tokio!"); 
+                        destino = "Tokia";
+                        codigo = "TKO";
+                        break;
+                    case "NO": 
+                        alert("Tus millas te permiten viajar gratis a Frankfurt!");
+                        destino = "Frankfurt";
+                        codigo = "FKT";
+                        break;
+                }                
+            }
+        }
+
+        function imprimirBoleto(cod, ciudad){
+            let canjear = prompt("Deseas obtener tu boleto de viaje? (SI/NO)");
+            if(canjear =="SI"){
+                boleto = cod + "-" + Math.ceil(Math.random()*999999);
+                alert("Tu código de boleto a " + ciudad + " es el " + boleto);
+                alert("Buen Viaje!");
+            }
+        } 
+
+    </script>
+</head>
+<body>
+    <p style="font-weight: bold;">Ejercicio RESUELTO</p>
+    
+</body>
+</html>

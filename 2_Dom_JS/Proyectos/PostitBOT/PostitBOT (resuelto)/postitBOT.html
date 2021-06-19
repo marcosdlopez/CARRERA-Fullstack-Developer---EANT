@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post it!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+    <header>
+        <h1>Post it!</h1>
+        <p>Qué vas a hacer mañana?</p>
+    </header>
+    <div id="contenedor">
+        <div id='btn-agregar-postit'>Agregar Postit!</div>
+    </div>
+    <div id="contenedor">
+        <div id="panel">
+            <!--
+            <div class="postit">
+                <div class='cancel'>X</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="postit">
+                <div class='cancel'>X</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="postit">
+                <div class='cancel'>X</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="postit">
+                <div class='cancel'>X</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="postit">
+                <div class='cancel'>X</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="postit">
+                <div class='cancel'>X</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            -->
+        </div>
+    </div>
+
+    <!-------------------Modal---------------------------->
+
+    <div class="container-modal">
+        <div class='modal'>
+            <span class="cancel">x</span>
+            <p class='titulo'>Qué vas a hacer mañana?</p>
+            <form>
+                <textarea placeholder='Mañana tengo que...' class='observaciones'  maxlength="60"></textarea>
+                <input type='submit' class='boton-enviar' value='Ingresar'>
+            </form>
+            <div class="cleaner"></div>
+        </div>
+    </div>
+
+    <!-------------------Auxiliares---------------------------->
+    
+    <div class='auxiliares no-display'>
+
+        <div class="postit">
+            <div class='cancel'>X</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+
+    </div>  
+
+    <script src="postit.js"></script>
+
+</body>
+</html>

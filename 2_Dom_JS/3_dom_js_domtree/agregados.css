@@ -1,0 +1,17 @@
+.marcados{
+    background-color: hotpink;
+    color:white;
+}
+
+.borde-hijo{
+    border: 1px solid green;
+}
+.borde-padre{
+    border: 1px solid blue;
+}
+.borde-abuelo{
+    border: 1px solid red;
+}
+.borde-hermano{
+    border: 1px solid orange;
+}

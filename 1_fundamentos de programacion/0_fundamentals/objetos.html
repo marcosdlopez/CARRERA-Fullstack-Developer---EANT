@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos</title>
+    <script>
+        
+        let perro = {
+            nombre: 'Roco',
+            raza: 'Labrador',
+            edad: 8,
+            peso: 10,
+            le_gusta: ['correr','jugar a la pelota', 'ladrar a los autos'],
+            hacer_pichina: function(){
+                alert("(ohhh un árbol).....PSSSSssssss");
+            },
+            ladrar: function(){
+                if(this.peso < 7){
+                    alert("guaaaau!");
+                }
+                else{
+                    alert("WOOOORFFF!");
+                }
+            },
+            correr: function(velocidad){
+                this.peso = this.peso - velocidad;
+            },
+            comer: function(comida){
+                this.peso = this.peso + comida;
+            }
+        }
+
+        console.log("La edad de " + perro.nombre + " es de " + perro.edad);
+
+        console.log("Lo 2do que más le gusta a mi perro es " + perro.le_gusta[1]);
+    
+    
+    
+    </script>
+</head>
+<body>    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdivinApp: te diré tu futuro!</title>
+    <script>
+        
+        //main();
+
+        function main(){
+            let nombreUsuario = presentacion();
+            let jugar = deseaJugar(nombreUsuario);       
+            while(jugar == "SI"){
+                preguntaMagica(nombreUsuario);        
+                let resultado = adivinarSuerte();            
+                darRespuesta(resultado);
+                jugar = deseaJugar(nombreUsuario);
+            }
+            finalizarJuego(nombreUsuario);
+        }            
+        
+        function presentacion(){
+            alert("Bienvenido! Soy AdivinApp: el amo de TU Futuro!");
+            return prompt("Cuál es tu nombre?");
+        }
+
+        function deseaJugar(nombre){
+            return prompt("Dime " + nombre + " Quieres saber TU futurooo? (SI/NO)");
+        }
+
+        function preguntaMagica(nombre){
+            prompt("Bien " + nombre + "!: HAZ TU PREGUNTA!");
+        }
+
+        function adivinarSuerte(){
+            
+            let numero_magico = Math.floor(Math.random()*5) + 1;  // Math.ceil(Math.random()*5)
+            
+            let resultado;
+            switch(numero_magico){
+                case 1:
+                    resultado = "Cuenta con ello!";
+                    break;
+                case 2:
+                    resultado = "Es muy probable";
+                    break;
+                case 3:
+                    resultado = "Mmm...tu suerte no esta hechada aún...";
+                    break;
+                case 4:
+                    resultado = "No es probable...";
+                    break;
+                case 5:
+                    resultado = "NI EN TUS SUEÑOS";
+                    break;
+            }
+            
+            return resultado;
+        }
+
+        function darRespuesta(suerte){
+            alert("Yyyyy...laaa respuestaaaa...");
+            alert("...eeesssss...");
+            alert(suerte);
+        }
+
+        function finalizarJuego(nombre){
+            alert("Ah " + nombre + ".....eres una miga de pan....");
+        }
+
+    </script>
+</head>
+<body>    
+</body>
+</html>

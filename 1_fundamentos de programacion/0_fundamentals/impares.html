@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Impares</title>
+    <script>
+        
+        console.log("Practicando impares")
+        let fecha_de_hoy = new Date()
+        let este_exacto_minuto = fecha_de_hoy.getMinutes()
+        let minutos_impares = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59]
+        if( minutos_impares.includes( este_exacto_minuto ) ){
+            console.log("Este minuto es impar")
+        } else {
+            console.log("Este minuto es par")
+        }
+
+    </script>
+</head>
+<body>    
+</body>
+</html>

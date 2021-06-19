@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdivinApp: te diré tu futuro!</title>
+    <script>
+        
+        //Presentación
+        alert("Bienvenido! Soy AdivinApp: el amo de TU Futuro!");
+        let nombre = prompt("Cuál es tu nombre?");
+        let jugar = prompt("Dime " + nombre + "Quieres saber TU futurooo? (SI/NO)");
+        
+        while(jugar == "SI"){
+            //Juego SI
+            let respuesta = prompt("Bien " + nombre + "!: HAZ TU PREGUNTA!");
+
+            let numero_magico = Math.floor(Math.random()*5) + 1;  // Math.ceil(Math.random()*5)
+            
+            switch(numero_magico){
+                case 1:
+                    alert("Cuenta con ello!");
+                    break;
+                case 2:
+                    alert("Es muy probable");
+                    break;
+                case 3:
+                    alert("Mmm...tu suerte no esta hechada aún...");
+                    break;
+                case 4:
+                    alert("No es probable...");
+                    break;
+                case 5:
+                    alert("NI EN TUS SUEÑOS");
+                    break;
+            }
+
+            jugar = prompt("Dime " + nombre + "Quieres saber TU futurooo? (SI/NO)");
+
+        }
+        
+        //Juego No
+        alert("Ah.....eres una miga de pan....");
+        
+    
+    </script>
+</head>
+<body>    
+</body>
+</html>

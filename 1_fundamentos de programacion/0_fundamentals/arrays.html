@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+    <script>
+
+        platos = ['asado', 'milanesa','pizza', 'tequeños','sushi'];
+
+        console.log("Mi primer plato favorito es: " + platos[0]);
+        console.log("Mi segundo plato favorito es: " + platos[1]);
+        console.log("Mi tercer plato favorito es: " + platos[2]);
+        
+        for (let chuleta = 0; chuleta < platos.length; chuleta++) {
+            let plato = platos[chuleta];
+            let numero_plato = chuleta + 1;
+            console.log("Mi planto n°" + numero_plato + " es " + plato);            
+        }
+        
+        //Agregar
+        platos.push('burritos con maple');
+
+        //Eliminar
+        platos.pop(); //Elimina el último
+        platos.shift(); //Elimina al primer elemento
+        platos.splice(1,2); //Elimina el 2do y 3er elemento
+        platos.splice(2,1); //Elimina unicamente el 3er elemento
+
+        //For espacial para arrays
+        for (item of platos){
+            console.log(item);
+        }
+
+
+
+
+    </script>
+</head>
+<body>    
+</body>
+</html>

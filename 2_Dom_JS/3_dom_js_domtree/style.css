@@ -1,0 +1,58 @@
+body{
+    margin:0;
+    font-family: 'Ubuntu', sans-serif;
+}
+div{
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    border-bottom: 2px grey solid;
+    background-color: rgb(139, 39, 0);
+    color:white;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+h1, header p{    
+    margin:0;
+}
+
+#sidebar{
+    width:25%;
+    float: left;
+    margin-top: 60px;
+}
+.boton{
+    margin: 20px;
+    background-color: rgb(139, 39, 0);
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 7px 0px #a2a0a0;
+}
+.boton:hover{
+    cursor: pointer ;
+    background-color: rgb(209, 61, 3);
+}
+.boton:active{
+    transform: scale(0.95)
+}
+#contenedor{
+    width:75%;
+    border-left: 2px grey solid;
+    position: fixed;
+    right: 0;
+    background-color: white;
+    top: 80px;
+}
+.seccion{
+    width:90%;
+    margin: auto;
+}

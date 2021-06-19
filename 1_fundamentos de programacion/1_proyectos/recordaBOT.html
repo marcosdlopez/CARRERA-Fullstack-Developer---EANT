@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RecordaBOT! Tu memoria Virtual!</title>
+    <script>
+
+        main();
+        
+        function main(){
+            
+            alert("Holaaaa! Soy RecordaBOT: tu asistente virtual");
+        
+            let recordatorio = [];
+
+            agregarRecordatorios();
+            verRecordatorios();
+            eliminarRecordatorios();
+        }       
+        
+        function agregarRecordatorios(){
+            while(prompt("Desea agregar un recordatorio? (SI/NO)")=="SI"){
+                nuevo_recordatorio = prompt("Ingrese su recordatorio");
+                recordatorio.push(nuevo_recordatorio);
+            }
+        }        
+        
+        function verRecordatorios(){
+            if(prompt("Desea ver el listado de recordatorios? (SI/NO)")=="SI"){
+                
+            }
+        }        
+        
+        function eliminarRecordatorios(){
+            while(prompt("Desea eliminar un recordatorio? (SI/NO)")=="SI"){
+            
+                let numero = parseInt(prompt(armarMensaje() + "\n" + "Cuál desea eliminar?"));
+                recordatorio.splice((numero-1),1);
+                
+                alert(armarMensaje());
+            }
+        }
+
+        function armarMensaje(){
+            let mensaje="";
+            for (let index = 0; index < recordatorio.length; index++) {
+                let elemento = recordatorio[index];
+                mensaje = mensaje + "Mañana " + (index+1) + ": " + elemento + "\n";
+            }
+            return mensaje;
+        }
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
